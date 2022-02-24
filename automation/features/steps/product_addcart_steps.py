@@ -1,15 +1,14 @@
 from behave import when, then
 from selenium.webdriver.common.by import By
 
-CART = (By.ID, 'nav-cart-count')
-PRODUCT_NAME = (By.CSS_SELECTOR, '#sc-active-cart li')
+CART = (By.XPATH, "//a [@href= 'https://gettop.us/cart/']")
+VIEW_CART = (By.ID, "//a[@class='button wc-forward']")
+ADDCART = (By.ID, "//a[@class='single_add_to_cart_button button alt']")
+CATEGORYMACPRO = (By.ID, "//a[@href='https://gettop.us/product-category/macbook/']")
+XBUTTON = (By.ID, "//a[@class ='mfp-close']")
+PRODUCT = (By.XPATH, "//a [@class ='woocommerce-mini-cart-item mini_cart_item']")
+PRODUCT_NAME = (By.XPATH, "// a[@class ='name product-title']")
 
-
-# @given('Open Amazon page')
-# def open_google(context):
-#    context.driver.get('https://gettop.us/')
-
-# look over
 
 @when('Open cart page')
 def open_cart_page(context):
