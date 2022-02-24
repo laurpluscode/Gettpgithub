@@ -19,7 +19,7 @@ def open_cart_page(context):
 def verify_cart_count(context, expected_count):
     actual_count = context.driver.find_element(*CART).text
     assert actual_count == expected_count, f'Error, actual {actual_count} did not match {expected_count}'
-    context.driver.find_element(By.ID, 'nav-search-submit-button').click()
+    context.driver.find_element(By.XPATH, "//a [@href= 'https://gettop.us/cart/']").click()
 
 
 @then('Verify cart has correct product')

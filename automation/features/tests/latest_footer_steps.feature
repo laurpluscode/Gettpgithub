@@ -7,5 +7,3 @@ Feature: #
   And Verify if link two is Macbook Pro
   And Verify if link three is iPhone SE
   Then Verify if link three is iPhone 11
-  Examples:
-   |  |

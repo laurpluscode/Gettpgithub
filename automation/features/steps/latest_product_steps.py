@@ -4,20 +4,22 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
 
-LTEBUTTON = (By.XPATH,"//a[text() ='Latest']")
+LTEBUTTON = (By.XPATH, "//a[text() ='Latest']")
 
-MCBOOKAIR = (By.XPATH,"//a[@href='https://gettop.us/product/macbook-air/']")
+MCBOOKAIR = (By.XPATH, "//a[@href='https://gettop.us/product/macbook-air/']")
 
-MCBOOKPRO = (By.XPATH,"//a[@href='https://gettop.us/product/macbook-pro-16/']")
+MCBOOKPRO = (By.XPATH, "//a[@href='https://gettop.us/product/macbook-pro-16/']")
 
-IPHONE_SE = (By.XPATH,"//a[@href='https://gettop.us/product/iphone-se/']")
+IPHONE_SE = (By.XPATH, "//a[@href='https://gettop.us/product/iphone-se/']")
 
-IPHONE11 = (By.XPATH,"//a[@href='https://gettop.us/product/iphone-11']")
+IPHONE11 = (By.XPATH, "//a[@href='https://gettop.us/product/iphone-11']")
+
 
 @given('Open Gettop page')
 def open_gettop(context):
     context.driver.get('https://gettop.us/')
     context.app.main_page.open()
+
 
 @when('User is at the footer of the homepage')
 def open_gettoppage(context):
@@ -26,7 +28,7 @@ def open_gettoppage(context):
 
 @then('Verify if link one is Macbookair')
 def verify_Best_selling(context):
-    context.driver.find_element(*MCBOOKAIR ).click()
+    context.driver.find_element(*MCBOOKAIR).click()
     sleep(1)
 
 

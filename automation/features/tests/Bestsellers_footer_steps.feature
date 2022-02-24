@@ -1,4 +1,5 @@
 # Created by lauren at 2/17/22
+#noinspection CucumberUndefinedStep
 Feature: # Enter feature name here
 
  Scenario Outline: # Verify Gettop footer links
@@ -9,4 +10,3 @@ Feature: # Enter feature name here
   And Verify if link three is AirPods
   Then Verify if link four is Watch Series 3
   Examples:
-   |  |rifies that the user sees the deals.
